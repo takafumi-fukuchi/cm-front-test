@@ -1,0 +1,69 @@
+/**
+* @MEMO Figma側の命名と合わせる
+* https://www.figma.com/file/SH48gEux22yvcTtGG0Kbci/WF?node-id=2702%3A285348&mode=dev
+**/
+// ニュートラルカラー
+$grey50: #e8e8e8;
+$grey100: #e6e6e6;
+$grey200: #cccccc;
+$grey300: #b3b3b3;
+$grey400: #999999;
+$grey500: #7f7f7f;
+$grey600: #666666;
+$grey700: #4d4d4d;
+$grey800: #333333;
+$grey900: #1a1a1a;
+$white: #ffffff;
+$black: #000000;
+
+// キーカラー
+$fanza-key-color: #ee2737;
+$fanza-background: #e6e6e6;
+$primary01: #f99a00;
+$primary02: #f6d641;
+$primary03: #019160;
+$primary04: #c0d401;
+
+// アクセントカラー
+$light-blue: #29abe2;
+
+// セマンティックカラー(エラー)
+$error-primary: #ec0000;
+$error-secondary: #b42f5a;
+$error-background: #f7eaee;
+
+// セマンティックカラー(サクセス)
+$success-primary: #259d63;
+$success-secondary: #197a4b;
+$success-background: #e8f2ed;
+
+// セマンティックカラー(警告)
+$warning-primary: #b78f00;
+$warning-secondary: #927200;
+
+// 余白(マージン)
+$margin-4: 4px;
+$margin-8: 8px;
+$margin-12: 12px;
+$margin-16: 16px;
+$margin-20: 20px;
+$margin-24: 24px;
+$margin-28: 28px;
+$margin-32: 32px;
+$margin-40: 40px;
+$margin-48: 48px;
+$margin-64: 64px;
+$margin-72: 72px;
+$margin-80: 80px;
+$margin-96: 96px;
+$margin-120: 120px;
+$margin-144: 144px;
+
+// フォントサイズ
+$font-size-l: 24px;
+$font-size-m: 20px;
+$font-size-s: 16px;
+$font-size-xs: 14px;
+
+// ボックスシャドウ
+$box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);

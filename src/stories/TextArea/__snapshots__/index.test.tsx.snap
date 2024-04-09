@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TextArea snapshotテスト Invalid storyのレンダリング結果 1`] = `
+<body>
+  <div>
+    <textarea
+      class="textArea isInvalid"
+      placeholder="記事の説明を入力してください"
+    />
+  </div>
+</body>
+`;
+
+exports[`TextArea snapshotテスト Sample storyのレンダリング結果 1`] = `
+<body>
+  <div>
+    <textarea
+      class="textArea"
+      placeholder="記事の説明を入力してください"
+    />
+  </div>
+</body>
+`;

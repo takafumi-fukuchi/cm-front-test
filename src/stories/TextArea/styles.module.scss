@@ -1,0 +1,54 @@
+@use "../../styles/theme.module.scss" as theme;
+
+.textArea {
+  padding: 8px;
+  border: 1px solid theme.$grey100;
+  border-radius: 4px;
+  font-size: theme.$font-size-s;
+
+  &.isInvalid {
+    border: solid 2px theme.$error-primary;
+    background-color: theme.$error-background;
+  }
+
+  &:focus {
+    outline-color: theme.$warning-primary;
+  }
+}
+.wrapper {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+}
+
+.label {
+  margin-bottom: 8px; // ラベルとテキストエリアの間隔
+  font-size: 21px; // ラベルのフォントサイズ
+}
+
+.error {
+  color: red;
+  font-size: 0.8em; // エラーメッセージのフォントサイズ
+  // 必要に応じて他のスタイルを追加
+}
+
+.characterCount {
+  /* 以前のスタイルからposition関連のプロパティを削除 */
+  padding: 2px 4px;
+  position: relative;
+  font-size: 0.75rem;
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #333;
+  border-radius: 4px;
+}
+
+.labelAndCountContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.requiredApostrophe {
+  color: red; // 赤色にする
+  font-size: 15px; // 通常のテキストより小さくする
+  vertical-align: super; // 上付き文字にする
+}
