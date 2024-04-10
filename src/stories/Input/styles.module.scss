@@ -1,0 +1,17 @@
+@use "../../styles/theme.module.scss" as theme;
+
+.input {
+  padding: 8px;
+  border: 1px solid theme.$grey100;
+  border-radius: 4px;
+  font-size: theme.$font-size-s;
+
+  &.isInvalid {
+    border: solid 2px theme.$error-primary;
+    background-color: theme.$error-background;
+  }
+
+  &:focus {
+    outline-color: theme.$warning-primary;
+  }
+}
