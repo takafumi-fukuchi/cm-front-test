@@ -8,9 +8,11 @@
     "start": "next start",
     "lint": "next lint",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "dev:gen-css": "hcm 'src/**/*.module.scss' --watch"
   },
   "dependencies": {
+    "aframe": "^1.5.0",
     "clsx": "^2.1.0",
     "next": "14.1.4",
     "react": "^18",
@@ -27,16 +29,20 @@
     "@storybook/nextjs": "^8.0.6",
     "@storybook/react": "^8.0.6",
     "@storybook/test": "^8.0.6",
-    "@types/node": "^20",
-    "@types/react": "^18",
+    "@testing-library/react": "^14.3.0",
+    "@types/aframe": "^1.2.6",
+    "@types/jest": "^29.5.12",
+    "@types/node": "^20.12.7",
+    "@types/react": "^18.2.77",
     "@types/react-dom": "^18",
     "autoprefixer": "^10.0.1",
     "eslint": "^8",
     "eslint-config-next": "14.1.4",
     "eslint-plugin-storybook": "^0.8.0",
+    "happy-css-modules": "^2.1.2",
     "postcss": "^8",
     "storybook": "^8.0.6",
     "tailwindcss": "^3.3.0",
-    "typescript": "^5"
+    "typescript": "^5.4.5"
   }
 }

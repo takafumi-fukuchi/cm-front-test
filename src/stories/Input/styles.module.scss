@@ -1,6 +1,6 @@
 @use "../../styles/theme.module.scss" as theme;
 
-.textArea {
+.input {
   padding: 8px;
   border: 1px solid theme.$grey100;
   border-radius: 4px;
@@ -19,11 +19,13 @@
   display: flex;
   position: relative;
   flex-direction: column;
+  width: fit-content;
 }
 
 .label {
-  margin-bottom: 8px; // ラベルとテキストエリアの間隔
-  font-size: 21px; // ラベルのフォントサイズ
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 8px;
 }
 
 .error {
@@ -33,12 +35,9 @@
 }
 
 .characterCount {
-  /* 以前のスタイルからposition関連のプロパティを削除 */
-  padding: 2px 4px;
-  position: relative;
-  font-size: 0.75rem;
-  color: #333;
-  border-radius: 4px;
+  font-size: 12px;
+  color: #666;
+  margin-top: 4px;
 }
 
 .labelAndCountContainer {

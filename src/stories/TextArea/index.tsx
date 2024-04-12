@@ -1,3 +1,4 @@
+'use client';
 import { clsx } from "clsx";
 import { forwardRef, useEffect, useState, type ComponentPropsWithRef } from "react";
 import styles from "./styles.module.scss";
@@ -8,14 +9,12 @@ interface TextAreaProps extends ComponentPropsWithRef<"textarea"> {
   errorMessage?: string;
   label?: string;
   maxLength?: number; // 最大文字数を指定するためのプロパティ
-  isCharacterCount?: boolean;
 }
 
 export const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
   ({ isInvalid, errorMessage, label, required, maxLength, ...rest }, ref) => {
     const [characterCount, setCharacterCount] = useState(0);
 
-    // テキストエリアの値が変更されたときに文字数を更新
     const handleInputChange = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
       setCharacterCount(event.target.value.length);
       if (rest.onChange) {
@@ -23,9 +22,8 @@ export const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
       }
     };
 
-    // refが変更されたとき、またはコンポーネントがマウントされたときに文字数を設定
     useEffect(() => {
-      if (ref && 'current' in ref && ref.current) {
+      if (ref && "current" in ref && ref.current) {
         setCharacterCount(ref.current.value.length);
       }
     }, [ref]);
@@ -37,24 +35,19 @@ export const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
     return (
       <div className={styles.wrapper}>
         <div className={styles.labelAndCountContainer}>
-        {label && (
+          {label && (
             <label className={styles.label}>
               {label}
               {required && <span className={styles.requiredApostrophe}>*</span>}
             </label>
-          )}          {maxLength && (
+          )}{" "}
+          {maxLength && (
             <div className={styles.characterCount}>
               {characterCount}/{maxLength}
             </div>
           )}
         </div>
-        <textarea
-          ref={ref}
-          className={textAreaClasses}
-          onChange={handleInputChange}
-          maxLength={maxLength}
-          {...rest}
-        />
+        <textarea ref={ref} className={textAreaClasses} onChange={handleInputChange} maxLength={maxLength} {...rest} />
         {isInvalid && errorMessage && <div className={styles.error}>{errorMessage}</div>}
       </div>
     );
