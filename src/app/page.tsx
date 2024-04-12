@@ -2,9 +2,16 @@
 
 import Image from "next/image";
 import {TextArea} from '../stories/TextArea';
-import {  useState} from "react";
+import { useEffect, useState} from "react";
+import dynamic from 'next/dynamic';
+import React from 'react';
+import VRVideoPlayer from '../components/VRVideoPlayer';
 
 export default function Home() {
+
+  const VRVideoPlayerDynamic = dynamic(() => import('../components/VRVideoPlayer'), {
+    ssr: false, // サーバーサイドレンダリングを無効にする
+  });
   const handleInputChange = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
     setCharacterCount(event.target.value.length);
   };
@@ -46,7 +53,10 @@ export default function Home() {
           priority
         />
       </div>
-
+      <div>
+        <h1>VR Video Player Example</h1>
+        <VRVideoPlayerDynamic videoSrc="https://cc3001.dmm.co.jp/vrsample/s/siv/sivr00332/sivr00332vrlite.mp4" width="600px" height="400px"/>
+      </div>
       <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
         <a
           href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
