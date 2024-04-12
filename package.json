@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "next lint",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "dev:gen-css": "hcm 'src/**/*.module.scss' --watch"
   },
   "dependencies": {
     "clsx": "^2.1.0",
@@ -36,6 +37,7 @@
     "eslint": "^8",
     "eslint-config-next": "14.1.4",
     "eslint-plugin-storybook": "^0.8.0",
+    "happy-css-modules": "^2.1.2",
     "postcss": "^8",
     "storybook": "^8.0.6",
     "tailwindcss": "^3.3.0",

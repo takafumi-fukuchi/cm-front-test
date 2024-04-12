@@ -1,3 +1,4 @@
+'use client';
 import { clsx } from "clsx";
 import { forwardRef, useEffect, useState, type ComponentPropsWithRef } from "react";
 import styles from "./styles.module.scss";

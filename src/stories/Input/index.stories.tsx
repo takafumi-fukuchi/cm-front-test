@@ -3,7 +3,7 @@ import type { ComponentProps } from "react";
 import { Input } from ".";
 
 const meta = {
-  title: "@columbus-front/ui/Input",
+  title: "@cm-front-test/ui/Input",
   component: Input,
 } satisfies Meta<typeof Input>;
 
@@ -21,5 +21,9 @@ export const Invalid: Story = {
   args: {
     ...defaultArgs,
     isInvalid: true,
+    label:"タイトル",
+    errorMessage:"2文字以上",
+    showCharacterCount:true,
+    maxLength:200
   },
 };

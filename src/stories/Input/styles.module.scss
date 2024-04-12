@@ -15,3 +15,38 @@
     outline-color: theme.$warning-primary;
   }
 }
+.wrapper {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  width: fit-content;
+}
+
+.label {
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.error {
+  color: red;
+  font-size: 0.8em; // エラーメッセージのフォントサイズ
+  // 必要に応じて他のスタイルを追加
+}
+
+.characterCount {
+  font-size: 12px;
+  color: #666;
+  margin-top: 4px;
+}
+
+.labelAndCountContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.requiredApostrophe {
+  color: red; // 赤色にする
+  font-size: 15px; // 通常のテキストより小さくする
+  vertical-align: super; // 上付き文字にする
+}
