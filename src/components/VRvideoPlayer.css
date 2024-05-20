@@ -1,0 +1,19 @@
+/* VRVideoPlayer.css */
+.a-enter-vr {
+    display: none !important;
+  }
+  
+  .vr-video-controls {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: white;
+  }
+  
+  .vr-video-controls input[type="range"] {
+    width: 200px;
+  }
+  
