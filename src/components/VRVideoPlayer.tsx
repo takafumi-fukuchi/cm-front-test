@@ -32,7 +32,7 @@ const VRVideoPlayer: React.FC<VRVideoPlayerProps> = ({ videoSrc, width = "100%",
         </a-assets>
         <a-videosphere src="#vr-video"></a-videosphere>
       </a-scene>
-      <button onClick={togglePlay} style={{ position: 'absolute', bottom: '20px', left: '20px' }}>
+      <button onClick={togglePlay} style={{ position: 'absolute', bottom: '20px', left: '20px' ,color:"white"}}>
         {isPlaying ? '停止' : '再生'}
       </button>
     </div>
